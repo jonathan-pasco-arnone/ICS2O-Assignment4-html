@@ -15,10 +15,10 @@
       <input type="text" id="diameterid">
     </form>
     <button id="solve">Solve</button>
-    <h4 id="mathRadiusid"></h4><br>
-    <h4 id="mathAreaid"></h4>
+    <h4 id="mathradiusid"></h4><br>
+    <h4 id="mathareaid"></h4>
     <h4 id="areaid"></h4><br>
-    <h4 id="mathCircumferenceid"></h4>
+    <h4 id="mathcircumferenceid"></h4>
     <h4 id="circumferenceid"></h4>
     <script>
       let diameter;
@@ -34,12 +34,12 @@
         mathRadius = ("The radius for this circle is " + diameter + " ÷ " + "2" + " or " + radius);
         mathArea = (radius + " x " + radius + " x " + "π");
         area = ("The area of this circle is " + radius*radius*Math.PI);
-        document.getElementById("mathRadiusid").innerHTML = mathRadius;
-        document.getElementById("mathAreaid").innerHTML = mathArea;
+        document.getElementById("mathradiusid").innerHTML = mathRadius;
+        document.getElementById("mathareaid").innerHTML = mathArea;
         document.getElementById("areaid").innerHTML = area;
         circumference = ("The circumference of this circle is " + 2*radius*Math.PI);
         mathCircumference = ("2" + " x " + "π" + " x " + radius);
-        document.getElementById("mathCircumferenceid").innerHTML = mathCircumference;
+        document.getElementById("mathcircumferenceid").innerHTML = mathCircumference;
         document.getElementById("circumferenceid").innerHTML = circumference;
       }
       document.getElementById("solve").addEventListener("click",getArea);
