@@ -11,3 +11,5 @@ def Math(x)
 end
 
 puts Math(Diameter)
+
+gets #Put this in so the program pausesS
