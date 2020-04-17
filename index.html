@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="My 6th webpage">
+    <meta name="keywordss" content="Hello, World! website">
+    <meta name="author" content="Jonathan Pasco-Arnone">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICS2O-Assignment4-html-Jonathan-pasco-arnone</title>
+  </head>
+  <body>
+    <img src="./images/circle.jpeg"><br>
+    <form>
+      <label for="diameter">Diameter:</label>
+      <input type="text" id="diameterid">
+    </form>
+    <button id="solve">Solve</button>
+    <h4 id="mathRadiusid"></h4><br>
+    <h4 id="mathAreaid"></h4>
+    <h4 id="areaid"></h4><br>
+    <h4 id="mathCircumferenceid"></h4>
+    <h4 id="circumferenceid"></h4>
+    <script>
+      let diameter;
+      let area;
+      let mathArea;
+      let mathCircumference;
+      let circumference;
+      let radius;
+      let mathRadius;
+      function getArea() {
+        diameter = document.getElementById("diameterid").value;
+        radius = (diameter/2);
+        mathRadius = ("The radius for this circle is " + diameter + " ÷ " + "2" + " or " + radius);
+        mathArea = (radius + " x " + radius + " x " + "π");
+        area = ("The area of this circle is " + radius*radius*Math.PI);
+        document.getElementById("mathRadiusid").innerHTML = mathRadius;
+        document.getElementById("mathAreaid").innerHTML = mathArea;
+        document.getElementById("areaid").innerHTML = area;
+        circumference = ("The circumference of this circle is " + 2*radius*Math.PI);
+        mathCircumference = ("2" + " x " + "π" + " x " + radius);
+        document.getElementById("mathCircumferenceid").innerHTML = mathCircumference;
+        document.getElementById("circumferenceid").innerHTML = circumference;
+      }
+      document.getElementById("solve").addEventListener("click",getArea);
+    </script>
+  </body>
+</html>
